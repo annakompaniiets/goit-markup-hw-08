@@ -1,0 +1,36 @@
+.clients-menu {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.clients-menu__item {
+  width: 170px;
+  height: 92px;
+}
+
+.clients-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(33, 150, 243, 1);
+  }
+}
+
+.cliets-menu__icon {
+  fill: rgba(175, 177, 184, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .clients-menu__link:hover &,
+  .clients-menu__link:focus & {
+    fill: var(--accent-color);
+  }
+}
