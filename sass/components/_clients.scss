@@ -1,11 +1,12 @@
 .clients-menu {
   display: flex;
   gap: 30px;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .clients-menu__item {
-  width: 170px;
+  width: 210px;
   height: 92px;
 }
 
@@ -32,5 +33,17 @@
   .clients-menu__link:hover &,
   .clients-menu__link:focus & {
     fill: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients-menu__item {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-menu__item {
+    width: 170px;
   }
 }

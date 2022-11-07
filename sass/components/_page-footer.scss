@@ -22,6 +22,8 @@
   font-style: normal;
   letter-spacing: 0.03em;
   font-size: 14px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .address-menu__link {
@@ -32,18 +34,20 @@
   font-size: 14px;
 }
 
+.address-menu__link--white {
+  color: white;
+}
+
 .footer-wrapper {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
 }
 
 .footer-address {
-  flex-grow: 1;
-  margin-right: 70px;
-}
-
-.footer-social-list {
-  margin-right: 93px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-action {
@@ -55,6 +59,14 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  margin-bottom: 60px;
 }
 
 .footer-social-list-link {
@@ -84,17 +96,18 @@
 
 .mail-subscription {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .user-email {
-  width: 358px;
   height: 50px;
   padding: 15px;
   color: var(--white-color);
   background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  margin-right: 12px;
+  // margin-right: 12px;
 
   &::placeholder {
     font-style: normal;
@@ -105,3 +118,64 @@
     color: rgba(255, 255, 255, 0.6);
   }
 }
+
+@media screen and (min-width: 768px) {
+  .footer-wrapper__tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .mail-subscription {
+    align-items: center;
+  }
+
+  .user-email {
+    display: inline;
+    min-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .footer-address {
+    flex-grow: 1;
+    margin-right: 70px;
+    align-items: flex-start;
+  }
+
+  .footer-social-list {
+    margin-right: 93px;
+  }
+
+  .address-menu {
+    text-align: start;
+  }
+
+  .footer-action {
+    text-align: start;
+  }
+
+  .mail-subscription {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .user-email {
+    min-width: 358px;
+  }
+}
+
+// .address-menu {
+//   text-decoration: none;
+//   color: rgba(255, 255, 255);
+//   font-style: normal;
+//   letter-spacing: 0.03em;
+//   font-size: 14px;
+// }

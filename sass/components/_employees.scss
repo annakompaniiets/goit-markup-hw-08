@@ -1,5 +1,6 @@
 .employees-menu {
   display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 
@@ -13,7 +14,7 @@
 
 .employees-menu__content-wrapper {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .social-list {
@@ -69,4 +70,21 @@
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .employees-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .employees-menu {
+    flex-wrap: nowrap;
+  }
+
+  .employees-menu__content-wrapper {
+    padding-bottom: 30px;
+  }
 }

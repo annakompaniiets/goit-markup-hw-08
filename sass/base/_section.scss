@@ -5,7 +5,7 @@
 
 .section__title {
   color: var(--primary-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -19,4 +19,16 @@
 
 .section--no-padding-top {
   padding-top: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .section__title {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .section--no-padding-top {
+    display: none;
+  }
 }
