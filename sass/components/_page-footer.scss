@@ -1,11 +1,13 @@
 .footer {
   background-color: var(--section-color);
-}
-
-.page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+// .page-footer {
+//   padding-top: 60px;
+//   padding-bottom: 60px;
+// }
 
 .logo-footer {
   display: inline-block;
@@ -150,16 +152,25 @@
 @media screen and (min-width: 1200px) {
   .footer-wrapper {
     align-items: baseline;
+    margin-right: 93px;
+    flex-grow: 1;
+  }
+
+  .page-footer {
+    display: flex;
+    align-items: baseline;
   }
 
   .footer-address {
     flex-grow: 1;
     margin-right: 70px;
+    margin-bottom: 0;
+    align-items: flex-start;
   }
 
-  .footer-social-list {
-    margin-right: 93px;
-  }
+  // .footer-social-list {
+  //   margin-right: 93px;
+  // }
 
   .address-menu {
     text-align: start;
@@ -172,11 +183,13 @@
   .mail-subscription {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 12px;
   }
 
   .user-email {
     min-width: 358px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
